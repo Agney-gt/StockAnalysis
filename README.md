@@ -1,6 +1,6 @@
 # StockAnalysis
 Python script that Scrapes the financial data and Insights from multiple moneycontrol urls of companies with large volume of trades and day-range for intraday trading. Includes financial analysis done by moneycontrol as well as CPR data for implementation of price action trading strategies.
-Outputs data into an excel file quick filtering and analysis.
+Outputs data into an excel file for quick filtering and analysis.
 
 Instructions for use:
 1. Download and install python3 as well as required modules - beautifulsoup and pandas.
