@@ -102,11 +102,9 @@ dff=pd.DataFrame()
 for x in test:
     html_doc=requests.get(x)
     pagetext = html_doc.text
-    #parser = html.fromstring(bytes(pagetext, encoding='utf8'))
     soup = BeautifulSoup(html_doc.text, 'lxml')
     df_list = pd.read_html(html_doc.text)
-    #dom = etree.HTML(str(parser))
-    #a=len(dom.xpath('//*[@id="sp_low"]'))
+    
     name=soup.h1
     df.at[y,"name"]=[name.text]
     Low = soup.find('div', attrs = {'id': 'sp_low' ,'class' : 'FL nseLP'}).text
