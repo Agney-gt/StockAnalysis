@@ -173,10 +173,6 @@ for x in test:
     df["Pivot"]=(df["High"].astype(float)+df["Low"].astype(float)+df["Close"].astype(float))/3
     df["BC"]=(df["High"].astype(float)+df["Low"].astype(float))/2
     df["TC"]=df["Pivot"]-df["BC"]+df["Pivot"]
-    #df["Test TC"]=df["Close"].astype(float)/df["TC"]
-    #df["Test BC"]=df["Close"].astype(float)/df["BC"]
-    #df.loc[(df['Test TC'].between(0.998,1.0025)) , 'Close Near TC'] = 'True'
-    #df.loc[(df['Test BC'].between(0.998,1.0025)) , 'Close Near BC'] = 'True'
     df.loc[(df['Close'].between((df["BC"]-1.5),(df["TC"])+1.5)) , 'Within CPR'] = 'True'
     y=y+1
     print(y)
